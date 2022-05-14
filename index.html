@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/style.css">
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuidv4.min.js' integrity='sha512-BCMqEPl2dokU3T/EFba7jrfL4FxgY6ryUh4rRC9feZw4yWUslZ3Uf/lPZ5/5UlEjn4prlQTRfIPYQkDrLCZJXA==' crossorigin='anonymous'></script>
+  <title>Controle de Estacionamento</title>
+</head>
+<body class="container">
+  <header>
+    <h1>Controle de Estacionamento</h1>
+    <h2 id="today">Data</h2>
+  </header>
+
+  <main>
+    <section id="control">
+      <form>
+        <div class="form-group">
+          <label for="placa">Placa
+            <input type="text" name="placa" id="placa">
+          </label>
+        
+          <label for="fabricante">Fabricante
+            <input type="text" name="fabricante" id="fabricante" list="fabricantes">
+          </label>
+          <datalist id="fabricantes">
+            <option>---</option>
+            <option>Chevrolet</option>
+            <option>Volkswagen</option>
+            <option>Toyota</option>
+            <option>Hyundai</option>
+            <option>Ford</option>
+            <option>Renault</option>
+          </datalist>
+        </div>
+
+        <div class="form-group">
+          <label for="modelo">Modelo
+            <input type="text" name="modelo" id="modelo">
+          </label>
+
+          <label for="ano">Ano
+            <input type="number" min="1900" max="2050" step="1" name="ano" id="ano">
+          </label>
+
+          <label for="cor">Cor
+            <input type="color" name="cor" id="cor">
+          </label>
+        </div>
+
+        <input type="submit" value="Cadastrar" id="submit">
+      </form>
+    </section>
+
+    <section class="registros">
+
+    </section>
+  </main>
+
+</body>
+</html>
+
+<script src="./dist/script.js"></script>
